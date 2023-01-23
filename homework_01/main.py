@@ -7,6 +7,7 @@ def power_numbers(*numbers):
     for item in numbers:
         newlist.append(item ** 2)
     print(newlist)
+    return(newlist)
 power_numbers(1, 2, 5, 7)
 # """
 #     функция, которая принимает N целых чисел,
@@ -45,7 +46,7 @@ def filter_numbers(number_list, filter_type):
 
 filter_numbers([1, 2, 3], ODD)
 filter_numbers([2, 3, 4, 5], EVEN)
-filter_numbers([1, 2, 24, 45], PRIME)
+filter_numbers([1, 2, 11, 13, 23, 24, 45], PRIME)
     # """
     # функция, которая на вход принимает список из целых чисел,
     # и возвращает только чётные/нечётные/простые числа
