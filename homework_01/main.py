@@ -23,31 +23,30 @@ PRIME = "prime"
 
 def is_prime(x):
     if x == 1:
-        n = 0
+        n = False
     elif x == 2:
-        n = 1
+        n = True
     i = 2
     while i < x:
         if x % i == 0:
-            n = 0
+            n = False
             break
         i += 1
         if i == x:
-            n = 1
+            n = True
     return(n)
 
 def filter_numbers(number_list, filter_type):
     if filter_type == ODD:
-        print([number for number in number_list if number % 2 != 0])
+        return [number for number in number_list if number % 2 != 0]
     if filter_type == EVEN:
-        print([number for number in number_list if number % 2 == 0])
+        return [number for number in number_list if number % 2 == 0]
     if filter_type == PRIME:
-        print([number for number in number_list if is_prime(number) == 1])
+        return [number for number in number_list if is_prime(number) == True]
 
-
-# filter_numbers ([], ODD)
-# filter_numbers([2, 3, 4, 5], EVEN)
-# filter_numbers([1, 2, 11, 13, 23, 24, 45], PRIME)
+# print(filter_numbers ([2, 3, 4, 5, 7], ODD))
+# print(filter_numbers([2, 3, 4, 5], EVEN))
+# print(filter_numbers([1, 2, 11, 13, 23, 24, 45], PRIME))
     # """
     # функция, которая на вход принимает список из целых чисел,
     # и возвращает только чётные/нечётные/простые числа
