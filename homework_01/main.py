@@ -23,18 +23,18 @@ PRIME = "prime"
 
 def is_prime(x):
     if x == 1:
-        n = False
+        return False
     elif x == 2:
-        n = True
+        return True
     i = 2
     while i < x:
         if x % i == 0:
-            n = False
+            return False
             break
         i += 1
         if i == x:
-            n = True
-    return(n)
+            return True
+    return
 
 def filter_numbers(number_list, filter_type):
     if filter_type == ODD:
@@ -42,7 +42,7 @@ def filter_numbers(number_list, filter_type):
     if filter_type == EVEN:
         return [number for number in number_list if number % 2 == 0]
     if filter_type == PRIME:
-        return [number for number in number_list if is_prime(number) == True]
+        return [number for number in number_list if is_prime(number)]
 
 # print(filter_numbers ([2, 3, 4, 5, 7], ODD))
 # print(filter_numbers([2, 3, 4, 5], EVEN))
